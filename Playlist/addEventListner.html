@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listner</title>
+</head>
+<body>
+    <button id="btn1">click mee</button>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let x = function(event){
+            alert("click happened")
+        }
+        // btn1.addEventListener('click', x)
+        // btn1.removeEventListener('click',x)
+
+        // btn1.removeEventListener('click', x)
+
+        // btn1.addEventListener('mouseover', function(e){
+        //     alert("mouse over happened");
+        // })
+
+        let backgroundRed = function(){
+            btn1.style.background = "red";
+        }
+        let backgroundWhite = function(){
+            btn1.style.background = "white";
+        }
+        
+        btn1.addEventListener('mouseover',backgroundRed)
+        btn1.addEventListener('mouseout',backgroundWhite)
+
+
+
+    </script>
+</body>
+</html>
