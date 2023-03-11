@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding elements</title>
+</head>
+
+<body>
+    this is written in body 
+    
+    <div class="firstcontainer">
+        this is written in first div.
+        <div class="first">this is first in container with class first</div>
+    </div>
+
+        
+    </body>
+    <script>
+        let a = document.getElementsByClassName('first')[0]
+        console.log(a);
+        // a.innerHTML = a.innerHTML + "<b> this is added with a variable"
+        
+        let b = document.createElement('div');
+        b.innerHTML = "<b> hello from B <b>";
+        // a.appendChild(b);
+        // a.prepend(b);
+        // a.before(b);
+        // a.after(b);
+        // a.replaceWith(b); 
+    </script>
+</body>
+</html>
