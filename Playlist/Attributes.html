@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+    <div id="first" class = "ok" alt="nothing" style="">this is first</div>
+    <span id="second" class = "op">this is second</span>
+    <script>
+        let first = document.getElementById("first");
+        // console.log(first.getAttribute("class"))
+        // console.log(first.getAttribute("id"))
+        // console.log(first.getAttribute("alt"))
+        
+        console.log(first.hasAttribute('class'))
+        console.log(first.hasAttribute('href'))
+        first.setAttribute("class" , "one two")
+       console.log(first.getAttributeNS("class","first"))
+    </script>
+</body>
+</html>
