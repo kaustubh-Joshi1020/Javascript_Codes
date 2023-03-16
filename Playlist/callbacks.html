@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <div id="div1">this is text</div>
+    <script>
+        // function fun(src, hello) {  // this is callback the callback can have any function name
+        //     let script = document.createElement("script")
+        //     script.src = src;
+        //     document.body.appendChild(script);
+        //     console.log("script is loaded")
+        //     // hello(" kaustubh");
+        //     let name = prompt("enter your name");
+        //     hello(name);
+        // }
+
+        // function hello(name,error) {
+        //     alert("hello" + name)
+        //     if(error){
+        //         console.log("error aaya hai bhai!")
+        //         return
+        //     }
+
+        // }
+        // fun("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js", hello)
+
+        // Callbacks
+        function loadScript(src, callback) {
+            var script = document.createElement("script");
+            script.src = src;
+
+            script.onload = function () {
+                console.log("Loaded script with SRC: " + src)
+                callback(null, src);
+            }
+
+            script.onerror = function () {
+                console.log("error aagaya hai bhai");
+                callback(new Error("Src mai error hai"))
+            }
+            document.body.appendChild(script);
+            
+        }
+
+        function hello(error, src) {
+            if (error) {
+                console.log(error)
+                return
+            }
+            alert('Hello World!' + src);
+        }
+
+
+        function goodmorning(error, src) {
+
+            if (error) {
+                console.log(error)
+                sendEmergencyMessageToCeo();
+                return
+            }
+            alert('Good morning' + src);
+        }
+
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", goodmorning)
+
+    </script>
+</body>
+
+</html>
