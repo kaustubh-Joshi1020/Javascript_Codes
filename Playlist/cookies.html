@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+<body>
+    <div><h1>cookies</h1></div>
+    <script>
+        document.cookie = "name=kaustubh" + " gav=dattawad";
+        document.cookie = "address=kolhapur";
+        document.cookie = "degree=B.E";
+        console.log(document.cookie);
+        let a = prompt("enter the key")
+        let b = prompt("enter the value")
+        // document.cookie = `${a} = ${b}`;
+        document.cookie = `${encodeURIComponent(a)} = ${encodeURIComponent(b)}`;
+        console.log(document.cookie);
+
+
+
+    </script>
+</body>
+</html>
