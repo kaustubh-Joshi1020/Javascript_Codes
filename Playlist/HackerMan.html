@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        #div1{
+            color: green;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .glow {
+        font-size: 70px;
+        color: #ffffff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #d04343, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                       0 0 50px #d04343, 0 0 60px #d04343, 0 0 70px #d04343;
+        }
+        to {
+          text-shadow: 0 0 20px #d04343, 0 0 30px #d04343, 0 0 40px #d04343, 0 0 50px #d04343,
+                       0 0 60px #d04343, 0 0 70px #d04343, 0 0 80px #d04343;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="glow" id="div1">
+        Hello Welcome
+    </div>
+
+
+    <script>
+
+        let divv = document.getElementById("div1");
+
+        async function hackerman1(){
+            let a = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    divv.innerHTML = "<br> started hacking into system.....";
+                }, 1000);
+            })
+        }
+
+        async function hackerman2(){
+            let b = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    divv.innerHTML =  "<br> initializing hacking..........";
+                }, 3000);
+            })
+        }
+
+        async function hackerman3(){
+            let c = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    divv.innerHTML = "<br> hacked into hackerman system......";
+                }, 5000);
+            })
+        }
+
+        async function hackerman4(){
+            let d = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    divv.innerHTML = "<br> hackerman system has been hacked.....";
+                }, 7000);
+            })
+        }
+        async function hackerman5(){
+            let e = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    divv.innerHTML =  "<br> All systems Have been Hacked Successfully.........";
+                }, 7000);
+            })
+        }
+        
+        async function disp(){
+            let aa = await hackerman1();
+            let bb = await hackerman2();
+            let cc = await hackerman3();
+            let dd = await hackerman4();
+            let ee = await hackerman5();
+        }
+        disp();
+    </script>
+</body>
+</html>
