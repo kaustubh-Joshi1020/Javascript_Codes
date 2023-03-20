@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner outer</title>
+</head>
+<body>
+    <p id="first">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At?</p>
+    <p id="first1" hidden>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At?</p>
+    <span id="second"><b>hi</b> i am span</span>
+
+<script>
+    // console.log(document.body.firstChild)
+    // console.log(document.body.firstElementChild)
+//    console.log(document.body.firstElementChild.innerHTML);
+    // document.body.firstElementChild.innerHTML = "this is changed text";
+    let first = document.getElementById('first');
+    console.log(first.innerHTML);
+    console.log(first.outerHTML);
+</script>
+
+</body>
+</html>
