@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matches function</title>
+</head>
+<body>
+    <div>
+<div class="box" id="d1">this is a div 1</div>
+<div class="box" id="d2">this is a div 2 <span class="box" id="sp1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, dolores soluta.</span> </div>
+
+</div>
+    <script>
+   let a1 = document.getElementById("d1");
+   let a2 = document.getElementById("d2");
+   console.log(a1.matches(".box"));
+   console.log(sp1.closest(".box"));
+   console.log(a2.contains(sp1));
+   console.log(a1.contains(sp1));
+
+    </script>
+</body>
+</html>
