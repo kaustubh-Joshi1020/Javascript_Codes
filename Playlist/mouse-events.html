@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+</head>
+<body>
+    <div class="first">
+        <button id="btn1" >click me</button>
+    </div>
+    <div id="div1"> this is the div</div>
+    <script>
+        let a  = document.getElementById("btn1")
+        let b = document.getElementById("div1");
+        // a.onclick = () =>{
+        //     alert("click ho gaya hai")
+        // }
+        // a.ondblclick = () =>{
+        //     alert("double click ho gaya hai")
+        // }
+        // a.oncontextmenu = () =>{
+        //     alert("right click ho gaya hai")
+        // }
+        // a.onmouseenter = () =>{
+        //     alert("mouse enter ho gaya hai")
+        // }
+        // a.onmousedown = () =>{
+        //     alert("mouse down ho gaya hai")
+        // }
+        // a.onmouseup = () =>{
+        //     alert("mouse up ho gaya hai")
+        // }
+        // a.onmouseleave = () =>{
+        //     alert("mouse chala gaya hai")
+        // }
+        // a.onmousemove = () =>{
+        //     alert("mouse move ho gaya hai")
+        // }
+        b.onmouseover = () =>{
+            document.body.style.color = "red";
+        }
+        b.onmouseout = () =>{
+            document.body.style.color = "black";
+        }
+
+
+    </script>
+</body>
+</html>
